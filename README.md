@@ -1,4 +1,4 @@
-# vim-lastplace v3.0.4
+# vim-pastplace v3.0.4
 
 Intelligently reopen files at your last edit position. By default git,
 svn, and mercurial commit messages are ignored because you
@@ -14,25 +14,25 @@ Advantages over the snippets that can be found around the net include:
 
 ## Configuration
 You can configure what file types to ignore by setting
-g:lastplace_ignore in your vimrc. By default it is set to:
+g:pastplace_ignore in your vimrc. By default it is set to:
 
-        let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+        let g:pastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 Folds are automatically opened when jumping to the last edit position. If you
 do not like this behavior you can disable it by putting this in your vimrc:
 
-        let g:lastplace_open_folds = 0
+        let g:pastplace_open_folds = 0
 
 
 ## Installation
-Thanks to [David Rabel](https://github.com/NoreSoft)'s hard work, you can install vim-lastplace from debian-testing:
+Thanks to [David Rabel](https://github.com/NoreSoft)'s hard work, you can install vim-pastplace from debian-testing:
 
-    apt-get install vim-lastplace
+    apt-get install vim-pastplace
     
-You can also use [pathogen.vim](https://github.com/tpope/vim-pathogen) or other plugin managers to install and use vim-lastplace.
+You can also use [pathogen.vim](https://github.com/tpope/vim-pathogen) or other plugin managers to install and use vim-pastplace.
 
     cd ~/.vim/bundle
-    git clone git://github.com/dietsche/vim-lastplace.git
+    git clone git://github.com/dietsche/vim-pastplace.git
 
 ## Miscellaneous
 This plugin is complete and stable. Please do not be afraid to try it even
@@ -42,7 +42,7 @@ a bug, please submit a pull request that fixes whatever problem you're having.
 ## Version History
 
 ### 3.0.4
-- Add g:lastplace_open_folds option.
+- Add g:pastplace_open_folds option.
 
 ### 3.0.3
 - Point release for Debian packaging. Changes all http links to https. No code changes.
@@ -77,9 +77,9 @@ a bug, please submit a pull request that fixes whatever problem you're having.
 
 Get the latest version, submit pull requests, and file bug reports
 on GitHub:
-- https://github.com/dietsche/vim-lastplace
+- https://github.com/dietsche/vim-pastplace
 
 If you like this plugin, please star and rate it on these sites:
 
-- [GitHub](https://github.com/dietsche/vim-lastplace)
+- [GitHub](https://github.com/dietsche/vim-pastplace)
 - [Vim.org](http://www.vim.org/scripts/script.php?script_id=5090)

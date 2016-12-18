@@ -1,10 +1,10 @@
-*vim-lastplace*  Intelligently reopen files where you left off.
+*vim-pastplace*  Intelligently reopen files where you left off.
 
 Author:  Greg Dietsche <https://www.gregd.org/>
 License: MIT
 Version: 3.0.4
 
-INTRODUCTION                                    *vim-lastplace-introduction*
+INTRODUCTION                                    *vim-pastplace-introduction*
 
 Intelligently reopen files where you left off.  By default git,
 svn, and mercurial commit messages are ignored because you
@@ -12,19 +12,19 @@ probably want to type a new message and not re-edit the previous
 one.
 
 You can configure what file types to ignore by setting
-g:lastplace_ignore in your vimrc. By default it is set to:
+g:pastplace_ignore in your vimrc. By default it is set to:
 
-        let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+        let g:pastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
 By default, folds are automatically opened when jumping to the last edit
 position. If you do not like this behavior you can disable it by putting
 this in your vimrc:
 
-        let g:lastplace_open_folds = 0
+        let g:pastplace_open_folds = 0
 
-ABOUT                                           *vim-lastplace-about*
+ABOUT                                           *vim-pastplace-about*
 
 Get the latest version and/or report a bug on GitHub:
-        https://github.com/dietsche/vim-lastplace
+        https://github.com/dietsche/vim-pastplace
 
  vim:tw=78:et:ft=help:norl:

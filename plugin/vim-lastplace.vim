@@ -1,5 +1,5 @@
 " ============================================================================
-" File:        vim-lastplace.vim
+" File:        vim-pastplace.vim
 " Description: Reopen files where you left off. Configurable.
 " Author:      Greg Dietsche <vim@gregd.org>
 " Licence:     MIT
@@ -7,23 +7,23 @@
 " Version:     3.0.4
 " ============================================================================
 
-if exists("b:loaded_lastplace_plugin") || &cp
+if exists("b:loaded_pastplace_plugin") || &cp
 	finish
 endif
-let b:loaded_lastplace_plugin = 1
+let b:loaded_pastplace_plugin = 1
 
 scriptencoding utf-8
 
-if !exists('g:lastplace_ignore')
-	let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+if !exists('g:pastplace_ignore')
+	let g:pastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 endif
 
-if !exists('g:lastplace_open_folds')
-	let g:lastplace_open_folds = 1
+if !exists('g:pastplace_open_folds')
+	let g:pastplace_open_folds = 1
 endif
 
-fu! s:lastplace()
-	if index(split(g:lastplace_ignore, ","), &filetype) == -1 
+fu! s:pastplace()
+	if index(split(g:pastplace_ignore, ","), &filetype) == -1 
 		if line("'\"") > 0 && line("'\"") <= line("$")
 			"if the last edit position is set and is less than the
 			"number of lines in this buffer.
@@ -48,14 +48,14 @@ fu! s:lastplace()
 				execute "normal! \G'\"\<c-e>"
 			endif
 		endif
-		if foldclosed(".") != -1 && g:lastplace_open_folds
+		if foldclosed(".") != -1 && g:pastplace_open_folds
 			"if we're in a fold, make the current line visible
 			execute "normal! zv"
 		endif
 	endif
 endf
 
-augroup lastplace_plugin
+augroup pastplace_plugin
 	autocmd!
-	autocmd BufWinEnter * call s:lastplace()
+	autocmd BufWinEnter * call s:pastplace()
 augroup END
