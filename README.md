@@ -1,4 +1,4 @@
-# vim-pastplace v3.0.4
+# vim-pastplace
 
 A plugin to restore the last cursor position.
 Forked from [vim-lastplace](https://github.com/dietsche/vim-lastplace).
