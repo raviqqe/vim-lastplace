@@ -1,85 +1,28 @@
 # vim-pastplace v3.0.4
 
-Intelligently reopen files at your last edit position. By default git,
-svn, and mercurial commit messages are ignored because you
-probably want to type a new message and not re-edit the previous
-one.
-## Advantages
-Advantages over the snippets that can be found around the net include:
-* Maximizes Available Context
-    - Center the cursor vertically after restoring last edit position.
-    - Keep as much of the file on screen as possible when last edit position is at the end of the file.
-* Commit messages automatically start beginning of the file. This is important because many version control systems re-use the same file for commit message editing.
-* Opens folds if the last edit position is inside a fold.
-
-## Configuration
-You can configure what file types to ignore by setting
-g:pastplace_ignore in your vimrc. By default it is set to:
-
-        let g:pastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
-
-Folds are automatically opened when jumping to the last edit position. If you
-do not like this behavior you can disable it by putting this in your vimrc:
-
-        let g:pastplace_open_folds = 0
+A plugin to restore the last cursor position.
+Forked from [vim-lastplace](https://github.com/dietsche/vim-lastplace).
 
 
 ## Installation
-Thanks to [David Rabel](https://github.com/NoreSoft)'s hard work, you can install vim-pastplace from debian-testing:
 
-    apt-get install vim-pastplace
-    
-You can also use [pathogen.vim](https://github.com/tpope/vim-pathogen) or other plugin managers to install and use vim-pastplace.
+Using [vim-plug](https://github.com/junegunn/vim-plug),
 
-    cd ~/.vim/bundle
-    git clone git://github.com/dietsche/vim-pastplace.git
+```
+Plug 'raviqqe/vim-pastplace'
+```
 
-## Miscellaneous
-This plugin is complete and stable. Please do not be afraid to try it even
-if there is very little recent activity in this repository. If you do find
-a bug, please submit a pull request that fixes whatever problem you're having.
 
-## Version History
+## Configuration
 
-### 3.0.4
-- Add g:pastplace_open_folds option.
+You can configure what file types to ignore by setting
+`g:pastplace_ignore` in your vimrc. By default it is set to:
 
-### 3.0.3
-- Point release for Debian packaging. Changes all http links to https. No code changes.
+```
+let g:pastplace_ignore = ['gitcommit', 'gitrebase', 'svn', 'hgcommit']
+```
 
-### 3.0.2
-- A fix for files that are smaller than the current screen size (issue #8)
 
-### 3.0.1
-- A fix for files with modelines.
+## License
 
-### 3.0.0
-
-- Open folds if the last edited area is inside a closed fold.
-
-### 2.0.1
-
-- Add gitrebase filetype to the ignore list.
-
-### 2.0.0
-
-- Center the screen when restoring the cursor position.
-- When at the end of a file, keep as much of it on screen as possible.
-
-### 1.0.0
-
-- Initial version.
-
-## About
-
-- Author  :  Greg Dietsche
-- Web Page: https://www.gregd.org/
-
-Get the latest version, submit pull requests, and file bug reports
-on GitHub:
-- https://github.com/dietsche/vim-pastplace
-
-If you like this plugin, please star and rate it on these sites:
-
-- [GitHub](https://github.com/dietsche/vim-pastplace)
-- [Vim.org](http://www.vim.org/scripts/script.php?script_id=5090)
+[MIT](./LICENSE)
