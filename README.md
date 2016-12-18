@@ -8,7 +8,7 @@ Forked from [vim-lastplace](https://github.com/dietsche/vim-lastplace).
 
 Using [vim-plug](https://github.com/junegunn/vim-plug),
 
-```
+```vim
 Plug 'raviqqe/vim-pastplace'
 ```
 
@@ -18,7 +18,7 @@ Plug 'raviqqe/vim-pastplace'
 You can configure what file types to ignore by setting
 `g:pastplace_ignore` in your vimrc. By default it is set to:
 
-```
+```vim
 let g:pastplace_ignore = ['gitcommit', 'gitrebase', 'svn', 'hgcommit']
 ```
 
